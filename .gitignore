@@ -1,3 +1,2 @@
 # Ignore class files, do not upload to GitHub
 *.class
-*.DS_Store
