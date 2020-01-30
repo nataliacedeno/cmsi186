@@ -20,7 +20,7 @@ public class PiEstimator {
                 System.exit(-1);
             }
         }
-        estimate(totalDartThrows)
+        System.out.println(estimate(totalDartThrows));
     }
 
     public static double estimate(double darts) {
@@ -34,6 +34,6 @@ public class PiEstimator {
             x = Math.random()*2;
             y = Math.random()*2;
         }
-        return (4 * numDartsInCircle/darts);
+        return 4 * numDartsInCircle/darts;
     }
 }
