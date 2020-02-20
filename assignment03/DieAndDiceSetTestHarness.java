@@ -198,19 +198,19 @@ public class DieAndDiceSetTestHarness {
       System.out.println( "      value of die at index 7: " + ds917.getIndividual( 7 ) );
       System.out.println( "      value of die at index 8: " + ds917.getIndividual( 8 ) );
 
-      System.out.println( "TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR 9 SEVENTEEN-SIDED DICE:" );
-      System.out.println( "   Test of isIndentical(): " );
-      System.out.println( "      Test of ds917 against ds69   : " + ds917.isIdentical( ds69 ) );
-      System.out.println( "      Test of ds917 against itself : " + ds917.isIdentical( ds917 ) );
+      //System.out.println( "TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR 9 SEVENTEEN-SIDED DICE:" );
+      //System.out.println( "   Test of isIndentical(): " );
+      //System.out.println( "      Test of ds917 against ds69   : " + ds917.isIdentical( ds69 ) );
+      //System.out.println( "      Test of ds917 against itself : " + ds917.isIdentical( ds917 ) );
 
-      System.out.println( "TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR NEW SET OF 9 SEVENTEEN-SIDED DICE:" );
+      //System.out.println( "TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR NEW SET OF 9 SEVENTEEN-SIDED DICE:" );
       ds917 = new DiceSet( 9, 17 );
       DiceSet ds2_917 = new DiceSet( 9, 17 );
       ds917.roll();
       ds2_917.roll();
       System.out.println( "   DiceSet ds917 contents       : " + ds917.toString() );
       System.out.println( "      New DiceSet ds2_917 contents : " + ds2_917.toString() );
-      System.out.println( "      Test of ds917 against ds2_917: " + ds917.isIdentical( ds2_917 ) );
+      //System.out.println( "      Test of ds917 against ds2_917: " + ds917.isIdentical( ds2_917 ) );
 
       System.out.println( "......End of DiceSet Class Testing.....\n\n" );
 

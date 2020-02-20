@@ -78,6 +78,9 @@ public class Die {
    public int getValue() {
       return this.pips;
    }
+   public int getSides() {
+      return this.sides;
+   }
 
   /**
    * @param  int  the number of sides to set/reset for this Die instance
@@ -138,7 +141,7 @@ public class Die {
       System.out.println();
       System.out.println("Changing number of sides to 12...");
       d1.setSides(12);
-      System.out.println("Number of sides: " + d1.sides);
+      System.out.println("Number of sides: " + d1.getSides());
       System.out.println("Non-static toString");
       System.out.println(d1.toString());
       System.out.println("Static toString");
@@ -168,7 +171,7 @@ public class Die {
       System.out.println();
       System.out.println("Changing number of sides to 5...");
       d2.setSides(5);
-      System.out.println("Number of sides: " + d2.sides);
+      System.out.println("Number of sides: " + d2.getSides());
       System.out.println("Non-static toString");
       System.out.println(d2.toString());
       System.out.println("Static toString");
