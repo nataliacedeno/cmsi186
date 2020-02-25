@@ -7,8 +7,8 @@ public class HighRoll {
 		int highScore = 0;
 
 		if (args.length < 2 || args.length > 2) {
-			System.out.print("No arguments supplied.\n");
-            System.out.print("Next time, try entering 2 integers for the number of dice in the set and the number of sides.");
+			System.out.print("Not valid input!\n");
+            System.out.print("Next time, try entering exactly 2 integers for the number of dice in the set and the number of sides.");
             System.out.println();
 			System.exit(-1);
 		}
