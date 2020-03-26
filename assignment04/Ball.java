@@ -170,7 +170,7 @@ public class Ball {
    */
    public static void main( String args[] ) {
       System.out.println( "\n   Testing the Ball class................" );
-      Ball b1 = new Ball( 10.0, 50.0, .01, .01);
+      Ball b1 = new Ball( 10.0, 50.0, 5, 7);
       System.out.println( "Ball b1: " + b1.toString() );
       System.out.println();
       b1.updateSpeedsForOneTick(1.0);
@@ -181,9 +181,26 @@ public class Ball {
       b1.move( 1.0 );
       System.out.println( "Ball b1: " + b1.toString() );
       System.out.println();
-      System.out.println(b1.getPosition()[0]);
-      System.out.println(Arrays.toString(b1.getPosition()));
-      System.out.println(b1.getSpeed()[X_INDEX]);
+      System.out.println("Ball b1 x-position: " + b1.getPosition()[0]);
+      System.out.println("Ball b1 position array: " + Arrays.toString(b1.getPosition()));
+      System.out.println("Ball b1 x-velocity: " + b1.getSpeed()[X_INDEX]);
+
+      System.out.println();
+      System.out.println();
+      Ball b2 = new Ball( 100, 150.0, 6, 12);
+      System.out.println( "Ball b2: " + b2.toString() );
+      System.out.println();
+      b2.updateSpeedsForOneTick(2);
+      b2.move(2);
+      System.out.println( "Ball b2: " + b2.toString() );
+      System.out.println();
+      b2.updateSpeedsForOneTick(2);
+      b2.move(2);
+      System.out.println( "Ball b2: " + b2.toString() );
+      System.out.println();
+      System.out.println("Ball b2 y-position: " + b2.getPosition()[1]);
+      System.out.println("Ball b2 position array: " + Arrays.toString(b2.getPosition()));
+      System.out.println("Ball b2 y-velocity: " + b2.getSpeed()[Y_INDEX]);
    }
 
 }
