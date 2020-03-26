@@ -49,7 +49,7 @@ public class PlaygroundSoccerSim {
 	private Clock c = new Clock();
   private int[] ballsCollided = new int[2];
   private boolean collision = false;
-
+  private int count = 0;
 
   // You can put a private static final String here that includes the intro message
   //  or how to use the program
@@ -69,9 +69,9 @@ public class PlaygroundSoccerSim {
     // if no arguments specified OR if number of arguments is NOT a factor of 4 
     // OR if number of arguments is NOT a factor of 4 plus 1
     // then dispay message about how to run this program, how it works
-    if (arguments.length == 0 || arguments.length %4 == 2 || arguments.length % 4 == 3 || arguments.length == 1) {
+    if (arguments.length == 0 || arguments.length % 4 == 2 || arguments.length % 4 == 3 || arguments.length == 1) {
     	throw new IllegalArgumentException ("Cannot execute the program. Try running the program with a multiple of 4 arguments.");
-    } else if (arguments.length %4 == 1) {
+    } else if (arguments.length % 4 == 1) {
     	try {
     		timeSlice = c.validateTimeSliceArg(arguments[arguments.length-1]);
     	} catch (NumberFormatException nfe) {
@@ -156,6 +156,9 @@ public class PlaygroundSoccerSim {
     System.out.println();
     c.tick(timeSlice);
     System.out.println("----------" + c.toString() + "----------");
+    System.out.println("Iteration #" + count);
+    count += 1;
+    System.out.println();
     System.out.println("Number of balls in motion: " + ballsMoving);
     System.out.println("Number of balls at rest in bounds: " + ballsAtRest);
     System.out.println("Number of balls out of bounds: " + ballsOutOfBounds);
@@ -166,6 +169,7 @@ public class PlaygroundSoccerSim {
       System.out.println();
     }
     collisionCheck();
+    
    }
 
   /**
@@ -217,10 +221,23 @@ public class PlaygroundSoccerSim {
    public static void main( String args[] ) {
       //message to user balls created, etc..
       PlaygroundSoccerSim pss = new PlaygroundSoccerSim();
+      System.out.println();
+      System.out.println();
+
+      System.out.println("   Welcome to PlaygroundSoccerSim.java! \n\n   The objective of this program is to input different balls on a \n   playground and see if any of them collide. To input balls type \n   a multiple of 4 doubles, the first two being the x and y position \n   of the ball and the second two being the x and y velocity of the ball. \n   You can also enter a time slice after all of the balls.");
+      System.out.println();
+      System.out.println();
+
       pss.validateArgsAndSetupSim(args);
+      
       System.out.println("Playground size: " + pss.playgroundWidth + "ft x " + pss.playgroundHeight + "ft");
+      System.out.println("Radius of all balls: 4.45in");
+      System.out.println("Time slice: " + pss.timeSlice);
       System.out.println();
       System.out.println("----------" + pss.c.toString() + "----------");
+      System.out.println("Iteration #" + pss.count);
+      pss.count += 1;
+      System.out.println();
       for (int i=0; i<pss.ballCount; i++) {
         if (pss.soccerBalls[i].isBallOutOfBounds(pss.playgroundWidth,pss.playgroundHeight)) {
           pss.ballsOutOfBounds += 1;
@@ -242,7 +259,7 @@ public class PlaygroundSoccerSim {
       }
       if (pss.collision) {
         System.out.println();
-        System.out.println("----------" + pss.c.toString() + "----------");
+        System.out.println();
         System.out.println("COLLISION BETWEEN BALL #" + pss.collisionCheck()[0] + " AND BALL #" + pss.collisionCheck()[1] + "!!");
         System.out.println();
         System.out.println("Ball #" + pss.collisionCheck()[0] + " Report...");
@@ -255,7 +272,7 @@ public class PlaygroundSoccerSim {
       }
       if (!pss.collision && !pss.atLeastOneBallInBoundsAndMoving()) {
         System.out.println();
-        System.out.println("----------" + pss.c.toString() + "----------");
+        System.out.println();
         System.out.println("NO COLLISION POSSIBLE! \nAll balls are at rest or out of bounds.");
         System.out.println();
         System.out.println();
