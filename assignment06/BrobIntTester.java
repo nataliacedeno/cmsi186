@@ -962,6 +962,8 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: -8614624\n" +
                              "        and got: " + g31.multiply( g30 ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 096: Multiplying g05 and g31 [0 * (-9283)]: " );
       try {
@@ -974,6 +976,8 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: 0\n" +
                              "        and got: " + g31.multiply( g05 ) );
+      }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n\n    TESTING DIVIDE() METHOD:\n" +
                           "    ========================" );
@@ -1145,6 +1149,7 @@ public class BrobIntTester {
          System.out.println( "      expecting: -10\n" +
                              "        and got: " + g15.subtract( g31 ) );
       }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
    }
 }
