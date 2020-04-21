@@ -965,89 +965,89 @@ public class BrobIntTester {
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
-      System.out.println( "\n      Test 096: Multiplying g05 and g31 [0 * (-9283)]: " );
+      System.out.println( "\n      Test 096: Multiplying g5and g31 [0 * (-9283)]: " );
       try {
          System.out.println( "      expecting: 0\n" +
-                             "        and got: " + g05.multiply( g31 ) );
+                             "        and got: " + g5.multiply( g31 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
-      System.out.println( "\n      Test 097: Multiplying g31 and g05 [(-9283) * 0]: " );
+      System.out.println( "\n      Test 097: Multiplying g31 and g5[(-9283) * 0]: " );
       try {
          System.out.println( "      expecting: 0\n" +
-                             "        and got: " + g31.multiply( g05 ) );
+                             "        and got: " + g31.multiply( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n\n    TESTING DIVIDE() METHOD:\n" +
                           "    ========================" );
-      System.out.println( "\n      Test 098: Dividing g05 by g29 [0 / 12903]: " );
+      System.out.println( "\n      Test 098: Dividing g5by g29 [0 / 12903]: " );
       try {
          System.out.println( "      expecting: 0\n" +
-                             "        and got: " + g05.divide( g29 ) );
+                             "        and got: " + g5.divide( g29 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
-      System.out.println( "\n      Test 099: Dividing g29 by g05 [12903 / 0]: " );
+      System.out.println( "\n      Test 099: Dividing g29 by g5[12903 / 0]: " );
       try {
          System.out.println( "      expecting: ERROR\n" +
-                             "        and got: " + g29.divide( g05 ) );
+                             "        and got: " + g29.divide( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 100: Dividing g15 by g31 [(-10) / (-9283)]: " );
       try {
          System.out.println( "      expecting: 0.00107723796\n" +
-                             "        and got: " + g05.divide( g29 ) );
+                             "        and got: " + g5.divide( g29 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 101: Dividing g31 by g15 [(-9283) / (-10)]: " );
       try {
          System.out.println( "      expecting: 928.3\n" +
-                             "        and got: " + g29.divide( g05 ) );
+                             "        and got: " + g29.divide( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 102: Dividing g30 by g29 [928 / 12903]: " );
       try {
          System.out.println( "      expecting: 0.07192125862 \n" +
-                             "        and got: " + g05.divide( g29 ) );
+                             "        and got: " + g5.divide( g29 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 103: Dividing g29 by g30 [12903 / 928]: " );
       try {
          System.out.println( "      expecting: 13.9040948276\n" +
-                             "        and got: " + g29.divide( g05 ) );
+                             "        and got: " + g29.divide( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 104: Dividing g30 by g31 [928 / (-9283)]: " );
       try {
          System.out.println( "      expecting: -0.09996768286\n" +
-                             "        and got: " + g05.divide( g29 ) );
+                             "        and got: " + g5.divide( g29 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 105: Dividing g31 by g30 [(-9283) / 928]: " );
       try {
          System.out.println( "      expecting: -10.0032327586\n" +
-                             "        and got: " + g29.divide( g05 ) );
+                             "        and got: " + g29.divide( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 106: Dividing g31 by g29 [(-9283) / 12903]: " );
       try {
          System.out.println( "      expecting: -0.71944509028 \n" +
-                             "        and got: " + g05.divide( g29 ) );
+                             "        and got: " + g5.divide( g29 ) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
       System.out.println( "\n      Test 107: Dividing g29 by g31 [12903 / (-9283)]: " );
       try {
          System.out.println( "      expecting: -1.3899601422\n" +
-                             "        and got: " + g29.divide( g05 ) );
+                             "        and got: " + g29.divide( g5) );
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
 
